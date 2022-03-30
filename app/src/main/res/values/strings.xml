@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Catalogo_Videojuegos</string>
+    <string name="hola_mundo">Hola Mundo!</string>
+    <string name="Anadir_Juego">Añadir Juego</string>
+
+        <string name="Añadir">Añadir juego</string>
+        <string name="anadir_videojuego">Añadir videojuego</string>
+        <string name="nombre_del_juego">Nombre del juego</string>
+        <string name="nombre_del_estudio">Nombre del estudio</string>
+        <string name="fecha_de_lanzamiento">Fecha de lanzamiento</string>
+        <string name="a_adir">Añadir</string>
+
+        <string name="to_regexitoso">Registro exitoso</string>
+        <string name="to_error">Hubo un error</string>
+        <string name="textview">TextView</string>
+</resources>

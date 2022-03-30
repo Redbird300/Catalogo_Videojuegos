@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_Plataforma">
+
+        <item>Selecciona una plataforma</item>
+        <item>PC</item>
+        <item>XBOX</item>
+        <item>Playstation</item>
+        <item>Nintendo</item>
+
+    </string-array>
+
+    <string-array name="spinner_clasificacion">
+
+        <item>Selecciona la clasificación</item>
+        <item>Clasificación A</item>
+        <item>Clasificación B</item>
+        <item>Clasificación B15</item>
+        <item>Clasificación C</item>
+        <item>Clasificación D</item>
+
+    </string-array>
+</resources>

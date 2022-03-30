@@ -1,5 +1,8 @@
 package com.example.catalogo_videojuegos.API;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -10,7 +13,6 @@ public class Cliente {
     private static Retrofit retrofit = null;
 
     private Cliente(){
-
         retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -18,20 +20,25 @@ public class Cliente {
     }
 
     public static synchronized Cliente getInstance(){
-
         if(cliente == null){
-
             cliente = new Cliente();
-
         }
         return cliente;
-
     }
 
     public RegistroAPI getMyApi() {
-
         return retrofit.create(RegistroAPI.class);
+    }
 
+    public static Retrofit getRetrofitInstance(){
+        if (retrofit == null) {
+            Gson gson = new GsonBuilder().setLenient().create();
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(BASE_URL)
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .build();
+        }
+        return retrofit;
     }
 
 }

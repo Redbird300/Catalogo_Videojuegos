@@ -8,9 +8,9 @@ public class Juego_Interface {
     @SerializedName("estudio")
     private String estudio;
     @SerializedName("plataforma")
-    private int plataforma;
+    private String plataforma;
     @SerializedName("clasi")
-    private int clasi;
+    private String clasi;
     @SerializedName("fechalan")
     private String fechalan;
 
@@ -22,11 +22,11 @@ public class Juego_Interface {
         return estudio;
     }
 
-    public int getPlataforma() {
+    public String getPlataforma() {
         return plataforma;
     }
 
-    public int getClasi() {
+    public String getClasi() {
         return clasi;
     }
 

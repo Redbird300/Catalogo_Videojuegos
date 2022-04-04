@@ -20,7 +20,7 @@
 
         <TextView
 
-            android:id="@+id/correo"
+            android:id="@+id/nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
@@ -31,7 +31,7 @@
 
         <TextView
 
-            android:id="@+id/nombre"
+            android:id="@+id/estudio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
@@ -42,7 +42,7 @@
 
         <TextView
 
-            android:id="@+id/telefono"
+            android:id="@+id/plataforma"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
@@ -50,19 +50,25 @@
             android:textColor="#673AB7"/>
 
 
-
         <TextView
 
-            android:id="@+id/fecha"
+            android:id="@+id/clasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
             android:textSize="15dp"
-            android:textColor="#009688"/>s
+            android:textColor="#009688"/>
 
+        <TextView
 
+            android:id="@+id/fechalan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:textSize="15dp"
+            android:textColor="#55981C"/>
 
-    </LinearLayout>
+   </LinearLayout>
 
 
 

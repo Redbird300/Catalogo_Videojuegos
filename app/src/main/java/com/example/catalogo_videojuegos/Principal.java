@@ -29,6 +29,7 @@ public class Principal extends AppCompatActivity {
     private List<Juego_Interface> juegos;
     private RegistroAPI consultaAPI;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +47,7 @@ public class Principal extends AppCompatActivity {
         // insertar
         nuevo = (FloatingActionButton)findViewById(R.id.nuevoJuego);
 
-        //insertar
+        //insertar 
         nuevo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,26 +57,35 @@ public class Principal extends AppCompatActivity {
         });
     }
 
+
+
     //consultar
     private void LlenarLista(){
+
         consultaAPI = Cliente.getRetrofitInstance().create(RegistroAPI.class);
         Call<List<Juego_Interface>> call = consultaAPI.getJuegos();
         call.enqueue(new Callback<List<Juego_Interface>>() {
 
             @Override
             public void onResponse(Call<List<Juego_Interface>> call, Response<List<Juego_Interface>> response) {
-                juegos =response.body();
+
+                juegos = response.body();
                 juegoAdapter= new JuegoAdapter(juegos,getApplicationContext());
                 recyclerView.setAdapter(juegoAdapter);
+
             }
 
             @Override
             public void onFailure(Call<List<Juego_Interface>> call, Throwable t) {
+
                 Toast.makeText(getApplicationContext(),"Error // "+t.getMessage()+" // Headers = "+ call.request().headers(),Toast.LENGTH_SHORT).show();
+
             }
+
         });
 
     }
 
-
 }
+
+

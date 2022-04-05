@@ -83,11 +83,6 @@ public class IngresoJuego extends AppCompatActivity {
         int Plataforma = plataforma.getSelectedItemPosition();
         int Clasificacion = clasificacion.getSelectedItemPosition();
         String Fecha = fecha.getText().toString();
-        System.out.printf("Nombre>>"+Nombre);
-        System.out.printf("Estudio>>"+Estudio);
-        System.out.printf("Plataforma>>"+Plataforma);
-        System.out.printf("Clasificacion>>"+Clasificacion);
-        System.out.printf("Fecha>>"+Fecha);
 
         Call<ResponseBody> call = Cliente.getInstance()
                 .getMyApi()

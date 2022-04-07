@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -61,7 +62,7 @@ public class IngresoJuego extends AppCompatActivity {
 
     //Metodos
 
-    private void mostrarCalendario(){
+    private void mostrarCalendario() {
         calendario = Calendar.getInstance();
         int dia = calendario.get(Calendar.DAY_OF_MONTH);
         int mes = calendario.get(Calendar.MONTH);
@@ -70,7 +71,7 @@ public class IngresoJuego extends AppCompatActivity {
         FechaDeDialogo = new DatePickerDialog(IngresoJuego.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int cAno, int cMes, int cDia) {
-                fecha.setText(cAno + "-" +cMes + "-" + cDia);
+                fecha.setText(cAno + "-" + cMes + "-" + cDia);
             }
         }, dia, mes, ano);
         FechaDeDialogo.show();
@@ -90,11 +91,12 @@ public class IngresoJuego extends AppCompatActivity {
         call.enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                if(response != null && response.isSuccessful()){
+                if (response != null && response.isSuccessful()) {
                     Toast.makeText(getApplicationContext(), getResources().getString(R.string.to_regexitoso), Toast.LENGTH_SHORT).show();
                     finish();
                 }
             }
+
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 t.printStackTrace();
@@ -105,5 +107,4 @@ public class IngresoJuego extends AppCompatActivity {
         });
 
     }
-
 }

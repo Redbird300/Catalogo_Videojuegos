@@ -86,6 +86,12 @@ public class Principal extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        LlenarLista();
+    }
+
 }
 
 
